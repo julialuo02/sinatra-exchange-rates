@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert <%= @from_currency %> to <%= @to_currency %></title>
+</head>
+<body>
+  <h1>Convert <%= @from_currency %> to <%= @to_currency %></h1>
+  <% if @rate %>
+    <p>1 <%= @from_currency %> equals <%= @rate %> <%= @to_currency %>.</p>
+  <% else %>
+    <p>Conversion rate unavailable. Please try again later.</p>
+  <% end %>
+  <p><a href="/<%= @from_currency %>">Go back</a>.</p>
+</body>
+</html>

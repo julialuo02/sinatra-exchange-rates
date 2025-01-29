@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sinatra Exchange Rates</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-
-  <body>
-
-    <%= yield %>
-
-  </body>
+<head>
+  <title>Currency Exchange</title>
+</head>
+<body>
+  <h1>Currency Pairs</h1>
+  <ul>
+    <% @currencies.each do |symbol, description| %>
+      <li>
+        <a href="/<%= symbol %>">Convert 1 <%= symbol %> to...</a>
+      </li>
+    <% end %>
+  </ul>
+</body>
 </html>
